@@ -5,19 +5,25 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     [SerializeField]
-    bool isSolid;
+    public bool isSolid;
     [SerializeField]
-    int layer;
+    public int layer;
 
     bool[] sides;
 
     Sprite[] sprites;
 
     private void Start() {
+        if (isSolid) {
+            GetComponent<SpriteRenderer>().enabled = true;
+        } else {
+            GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
+
+    void UpdateSides () {
 
     }
 
-    private void Update() {
-        
-    }
+
 }

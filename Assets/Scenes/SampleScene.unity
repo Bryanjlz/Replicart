@@ -271,11 +271,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108599071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96496004, y: 1.1088499, z: -28.615744}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 890228049}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144783647
 GameObject:
@@ -319,7 +320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193300267
 GameObject:
@@ -392,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bea389aebc76ea4b98fdf98f56b0922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 0
+  isSolid: 1
   layer: 0
 --- !u!212 &193300271
 SpriteRenderer:
@@ -516,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bea389aebc76ea4b98fdf98f56b0922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 0
+  isSolid: 1
   layer: 0
 --- !u!212 &195555332
 SpriteRenderer:
@@ -764,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bea389aebc76ea4b98fdf98f56b0922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 0
+  isSolid: 1
   layer: 0
 --- !u!212 &460786405
 SpriteRenderer:
@@ -1048,8 +1049,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890228048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1836388877}
@@ -1068,8 +1069,8 @@ Transform:
   - {fileID: 245037927}
   - {fileID: 969309956}
   - {fileID: 1574880913}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 108599072}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &890228050
 MonoBehaviour:
@@ -1402,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bea389aebc76ea4b98fdf98f56b0922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 0
+  isSolid: 1
   layer: 0
 --- !u!212 &1076129373
 SpriteRenderer:
@@ -1851,11 +1852,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550873373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96496004, y: 1.1088499, z: -28.615744}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574880912
 GameObject:
@@ -2176,7 +2177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bea389aebc76ea4b98fdf98f56b0922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 0
+  isSolid: 1
   layer: 0
 --- !u!212 &1836388881
 SpriteRenderer:
@@ -2300,7 +2301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bea389aebc76ea4b98fdf98f56b0922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSolid: 0
+  isSolid: 1
   layer: 0
 --- !u!212 &2009378518
 SpriteRenderer:
