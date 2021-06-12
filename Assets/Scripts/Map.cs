@@ -26,8 +26,10 @@ public class Map : MonoBehaviour
 
         // Load Level Group Blocks
         foreach (Transform gt in levelGroups.transform) {
-            print(gt.gameObject);
             AddGroup(gt.gameObject);
+            foreach(Transform bt in gt) {
+                bt.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
     }
 

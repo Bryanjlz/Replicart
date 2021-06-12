@@ -16,16 +16,6 @@ public class Draggable : MonoBehaviour {
         map = GameObject.Find("Map").GetComponent<Map>();
     }
 
-    private void OnMouseDown()
-    {
-        PickUp();
-    }
-
-    private void OnMouseUp()
-    {
-        Release();
-    }
-
     private void Update()
     {
         mousePosX = (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
@@ -61,7 +51,7 @@ public class Draggable : MonoBehaviour {
         }
     }
 
-    protected virtual void Release() {
+    public virtual void Release() {
         isBeingHeld = false;
 
         for (int i = 0; i < transform.childCount; i++)

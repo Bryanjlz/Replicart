@@ -13,6 +13,7 @@ public class Block : MonoBehaviour
     [SerializeField]
     public SpriteRenderer spriteRenderer;
 
+    BlockDragController bdc;
     Map map;
 
     bool[][] surrounds;
@@ -23,6 +24,7 @@ public class Block : MonoBehaviour
         for (int i = 0; i < 3; i++) {
             surrounds[i] = new bool[3];
         }
+        bdc = transform.parent.gameObject.GetComponent<BlockDragController>();
         map = GameObject.Find("Map").GetComponent<Map>();
         if (isSolid) {
             GetComponent<SpriteRenderer>().enabled = true;
@@ -132,5 +134,12 @@ public class Block : MonoBehaviour
         return false;
     }
 
+    private void OnMouseDown() {
+        bdc.PickUp();
+    }
+
+    private void OnMouseUp() {
+        bdc.Release();
+    }
 
 }

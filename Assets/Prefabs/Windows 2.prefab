@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5631928601524910726}
   - component: {fileID: 1870510104658457321}
   - component: {fileID: 5035112752666065631}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Windows 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,7 +8,7 @@ public class BlockDragController : Draggable
     public Bounds validSpace;
     public DraggableProducer source;
 
-    protected override void Release() {
+    public override void Release() {
         if (!validSpace.Intersects(GetComponent<BoxCollider2D>().bounds)) {
             print("Aw no");
             source.amount ++;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3564719089684985751}
   - component: {fileID: 3100067499688695285}
   - component: {fileID: 4229051875708123086}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Loss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
