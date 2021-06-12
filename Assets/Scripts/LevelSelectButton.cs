@@ -13,6 +13,11 @@ public class LevelSelectButton : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    public void Click()
+    {
+        FindObjectOfType<AudioManager>().Play("click");
+    }
+
     public void SetTitle() {
         manager.SetTitle(levelName.ToUpperInvariant());
     }

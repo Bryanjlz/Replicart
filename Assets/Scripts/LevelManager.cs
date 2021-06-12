@@ -42,6 +42,7 @@ public class LevelManager : MonoBehaviour
         // Only display the menu for now
         if (!winningState) {
             pauseMenu.SetActive(true);
+            FindObjectOfType<AudioManager>().Jank();
             isPaused = true;
         }
     }
@@ -83,6 +84,11 @@ public class LevelManager : MonoBehaviour
 
     public void Lose() {
 
+    }
+
+    public void Click()
+    {
+        FindObjectOfType<AudioManager>().Jank();
     }
 
     IEnumerator WinInHalfSecond() {

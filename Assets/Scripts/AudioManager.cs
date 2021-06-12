@@ -38,6 +38,11 @@ public class AudioManager : MonoBehaviour
         Play("bmusic");
     }
 
+    public void Jank()
+    {
+        Play("click");
+    }
+
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
