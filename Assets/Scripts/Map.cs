@@ -11,6 +11,12 @@ public class Map : MonoBehaviour
     GameObject levelGroups;
     [SerializeField]
     public SpriteTree spriteTree;
+    [SerializeField]
+    public SpriteTree spriteTreeG;
+    [SerializeField]
+    public SpriteTree spriteTreeR;
+    [SerializeField]
+    public SpriteTree spriteTreeY;
 
     [SerializeField]
     Sprite[] sprites;
@@ -33,8 +39,20 @@ public class Map : MonoBehaviour
 
     private void LoadSprites () {
         spriteTree = CreateTree(new SpriteTree(), 8);
+        spriteTreeG = CreateTree(new SpriteTree(), 8);
+        spriteTreeR = CreateTree(new SpriteTree(), 8);
+        spriteTreeY = CreateTree(new SpriteTree(), 8);
+
         foreach (Sprite s in sprites) {
-            spriteTree.Add(s, s.name.Substring(1));
+            if (s.name.Substring(0, 1).Equals("b")) {
+                spriteTree.Add(s, s.name.Substring(1));
+            } else if (s.name.Substring(0, 1).Equals("g")) {
+                spriteTreeG.Add(s, s.name.Substring(1));
+            } else if (s.name.Substring(0, 1).Equals("r")) {
+                spriteTreeR.Add(s, s.name.Substring(1));
+            } else {
+                spriteTreeY.Add(s, s.name.Substring(1));
+            }
         }
     }
 

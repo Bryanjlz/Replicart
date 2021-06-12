@@ -92,7 +92,16 @@ public class Block : MonoBehaviour
 
         print(this +" " +  spriteType);
         // Set new sprite
-        spriteRenderer.sprite = map.spriteTree.Get(spriteType);
+        if (spriteRenderer.sprite.name.Substring(0,1).Equals("b")) {
+            spriteRenderer.sprite = map.spriteTree.Get(spriteType);
+        } else if (spriteRenderer.sprite.name.Substring(0, 1).Equals("g")) {
+            spriteRenderer.sprite = map.spriteTreeG.Get(spriteType);
+        } else if (spriteRenderer.sprite.name.Substring(0, 1).Equals("r")) {
+            spriteRenderer.sprite = map.spriteTreeR.Get(spriteType);
+        } else {
+            spriteRenderer.sprite = map.spriteTreeY.Get(spriteType);
+        }
+        
     }
 
     private bool CheckPos (int xOff, int yOff) {
