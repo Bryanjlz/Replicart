@@ -18,6 +18,7 @@ public class ExpectedResult : MonoBehaviour
             child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.2f);
             child.GetComponent<BoxCollider2D>().enabled = false;
             child.GetComponent<Block>().isSolid = false;
+            // Just in case
             child.GetComponent<SpriteRenderer>().sortingLayerName = "Solution";
         }
 
@@ -99,7 +100,19 @@ public class ExpectedResult : MonoBehaviour
         return false;
     }
 
+    public void EmphasizePreview() {
+        foreach (Transform child in transform) {
+            Color current = child.GetComponent<SpriteRenderer>().color;
+            child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1);
+        }
+    }
 
+    public void DeEmphasizePreview() {
+        foreach (Transform child in transform) {
+            Color current = child.GetComponent<SpriteRenderer>().color;
+            child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.2f);
+        }
+    }
 
     public bool Match() {
         Dictionary<Vector2, bool> isSet = new Dictionary<Vector2, bool>();

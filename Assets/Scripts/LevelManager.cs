@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,13 +12,16 @@ public class LevelManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject winScreen;
     public List<Button> buttons;
+    public TextMeshProUGUI previewPrompt;
     [Header("Set in Editor (In game)")]
     public Map map;
     public ExpectedResult expectedSolution;
+    public SpriteRenderer grid;
     
     [Header("Internal Values")]
     public bool isPaused;
     public bool winningState;
+    public bool inPreviewMode;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,11 @@ public class LevelManager : MonoBehaviour
                 ShowPauseMenu();
             }
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            EmphasizePreview();
+        } else if (Input.GetKeyUp(KeyCode.LeftShift)) {
+            DeEmphasizePreview();
+        }
     }
 
     public void ShowPauseMenu() {
@@ -50,6 +59,20 @@ public class LevelManager : MonoBehaviour
     public void HidePauseMenu() {
         pauseMenu.SetActive(false);
         isPaused = false;
+    }
+
+    public void EmphasizePreview() {
+        inPreviewMode = true;
+        grid.sortingLayerName = "Promoted Background";
+        previewPrompt.text = "PREVIEW (SHIFT) ON";
+        expectedSolution.EmphasizePreview();
+    }
+
+    public void DeEmphasizePreview() {
+        inPreviewMode = false;
+        grid.sortingLayerName = "Background";
+        previewPrompt.text = "PREVIEW (SHIFT) OFF";
+        expectedSolution.DeEmphasizePreview();
     }
 
     public void CheckWin() {
