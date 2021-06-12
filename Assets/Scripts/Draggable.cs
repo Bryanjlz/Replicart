@@ -58,7 +58,6 @@ public class Draggable : MonoBehaviour {
 
     public virtual void Release() {
         isBeingHeld = false;
-
         for (int i = 0; i < transform.childCount; i++)
         {
             Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
