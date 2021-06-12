@@ -39,6 +39,10 @@ public class LevelManager : MonoBehaviour
         winScreen.SetActive(true);
     }
 
+    public void Replay() {
+        
+    }
+
     public void Lose() {
 
     }
