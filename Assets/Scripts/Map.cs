@@ -17,7 +17,7 @@ public class Map : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         map = new Dictionary<Vector2, List<GameObject>>();
 

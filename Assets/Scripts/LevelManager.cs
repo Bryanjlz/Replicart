@@ -9,7 +9,8 @@ public class LevelManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject winScreen;
     [Header("Set in Editor (In game)")]
-    public WinTrigger winFlag;
+    public Map map;
+    public ExpectedResult expectedSolution;
     
     [Header("Internal Values")]
     public bool isPaused;
@@ -18,7 +19,6 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         isPaused = false;
-        winFlag.manager = this;
     }
 
     // Update is called once per frame
@@ -38,6 +38,12 @@ public class LevelManager : MonoBehaviour
         isPaused = false;
     }
 
+    public void CheckWin() {
+        if (expectedSolution.Match()) {
+            StartCoroutine("WinInHalfSecond");
+        }
+    }
+
     public void Win() {
         winScreen.SetActive(true);
     }
@@ -48,5 +54,10 @@ public class LevelManager : MonoBehaviour
 
     public void Lose() {
 
+    }
+
+    IEnumerator WinInHalfSecond() {
+        yield return new WaitForSecondsRealtime(0.5f);
+        Win();
     }
 }
