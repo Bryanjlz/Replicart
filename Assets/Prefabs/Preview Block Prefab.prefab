@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8778862811200422174}
   - component: {fileID: 3494415650367376144}
   - component: {fileID: 5653263731187572808}
+  - component: {fileID: 4160677196282518588}
   m_Layer: 5
   m_Name: Preview Block Prefab
   m_TagString: Untagged
@@ -75,3 +76,16 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4160677196282518588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344464486887550150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc4195a3251c5c47a46629254497345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rt: {fileID: 8778862811200422174}

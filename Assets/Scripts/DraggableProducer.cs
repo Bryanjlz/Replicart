@@ -66,6 +66,9 @@ public class DraggableProducer : MonoBehaviour
             rt.sizeDelta = new Vector2(ratioDimension, ratioDimension);
             rt.anchoredPosition = new Vector2(xPos, yPos);
             rt.localScale = new Vector3(1f, 1f, 1f);
+
+            // Add colour to the preview block
+            newBlock.GetComponent<PreviewBlock>().colour = bt.gameObject.GetComponent<Block>().colour;
         }
 
         // Gets the right sprite through using the pseudo map
@@ -115,13 +118,10 @@ public class DraggableProducer : MonoBehaviour
                     }
 
                     // Set new sprite
-                    Colour colour = Colour.BLUE;
-                    blocks[x][y].GetComponent<Image>().sprite = map.spriteTrees[(int)colour].Get(spriteType);
+                    blocks[x][y].GetComponent<Image>().sprite = map.spriteTrees[(int)blocks[x][y].GetComponent<PreviewBlock>().colour].Get(spriteType);
                 }
             }
         }
-
-
     }
 
     public void Generate() {

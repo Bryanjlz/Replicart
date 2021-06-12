@@ -5,6 +5,6 @@ using UnityEngine.UI;
 
 public class PreviewBlock : MonoBehaviour
 {
-    Colour colour;
-    RectTransform rt;
+    public Colour colour;
+    public RectTransform rt;
 }
