@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DraggableProducer : MonoBehaviour
 {
     public GameObject previewBlockPrefab;
     public GameObject produce;
+    public Image panel;
+    public TextMeshProUGUI text;
+
     public int amount;
     public Bounds validSpace;
 
@@ -120,6 +124,9 @@ public class DraggableProducer : MonoBehaviour
                 }
             }
         }
+
+        text.text = amount.ToString();
+        text.gameObject.transform.SetAsLastSibling();
     }
 
     public void Generate() {
@@ -132,7 +139,19 @@ public class DraggableProducer : MonoBehaviour
             go.GetComponent<BlockDragController>().PickUp();
             go.GetComponent<BlockDragController>().validSpace = validSpace;
             go.GetComponent<BlockDragController>().source = this;
-            amount --;
+            ModifyAmount(-1);
+        }
+    }
+
+    public void ModifyAmount(int mod) {
+        amount += mod;
+        text.text = amount.ToString();
+        if (amount == 0) {
+            GetComponent<Button>().interactable = false;
+            panel.color = new Color(0.6f, 0.6f, 0.6f);
+        } else {
+            GetComponent<Button>().interactable = true;
+            panel.color = new Color(1, 1, 1);
         }
     }
 }

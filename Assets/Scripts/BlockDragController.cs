@@ -11,7 +11,7 @@ public class BlockDragController : Draggable
     public override void Release() {
         if (!validSpace.Intersects(GetComponent<BoxCollider2D>().bounds)) {
             print("Aw no");
-            source.amount ++;
+            source.ModifyAmount(1);
             map.RemoveGroup(gameObject);
             Destroy(gameObject);
         } else {
