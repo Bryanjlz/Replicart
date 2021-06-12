@@ -10,7 +10,7 @@ public class Map : MonoBehaviour
     [SerializeField]
     GameObject levelGroups;
     [SerializeField]
-    SpriteTree spriteTree;
+    public SpriteTree spriteTree;
 
     [SerializeField]
     Sprite[] sprites;
@@ -20,11 +20,14 @@ public class Map : MonoBehaviour
     void Start()
     {
         map = new Dictionary<Vector2, LinkedList<GameObject>>();
+
+        // Load Sprites
+        LoadSprites();
+
         // Load Level Group Blocks
         foreach (Transform gt in levelGroups.transform) {
             AddGroup(gt.gameObject);
         }
-        LoadSprites();
     }
 
     private void LoadSprites () {
@@ -44,22 +47,57 @@ public class Map : MonoBehaviour
     }
 
     public void AddGroup (GameObject group) {
+        int xMax = -100000;
+        int yMax = -100000;
+        int xMin = 100000;
+        int yMin = 100000;
         foreach (Transform ct in group.transform) {
-            Vector2 pos = new Vector2(ct.position.x, ct.position.y);
-            if (map.ContainsKey(pos)) {
-                map[pos].AddLast(ct.gameObject);
-            } else {
-                LinkedList<GameObject> blockLayers = new LinkedList<GameObject>();
-                blockLayers.AddLast(ct.gameObject);
-                map.Add(pos, blockLayers);
+            if (ct.gameObject.GetComponent<Block>().isSolid) {
+                float x = ct.position.x;
+                float y = ct.position.y;
+                Vector2 pos = new Vector2(x, y);
+                if (y < yMin) {
+                    yMin = (int)y;
+                }
+                if (y > yMax) {
+                    yMax = (int)y;
+                }
+                if (x < xMin) {
+                    xMin = (int)x;
+                }
+                if (x > xMax) {
+                    xMax = (int)x;
+                }
+
+                if (map.ContainsKey(pos)) {
+                    map[pos].AddLast(ct.gameObject);
+                } else {
+                    LinkedList<GameObject> blockLayers = new LinkedList<GameObject>();
+                    blockLayers.AddLast(ct.gameObject);
+                    map.Add(pos, blockLayers);
+                }
             }
         }
+        UpdateSprites(xMin, yMin, xMax, yMax);
     }
 
     public void RemoveGroup (GameObject group) {
         foreach (Transform ct in group.transform) {
-            Vector2 pos = new Vector2(ct.position.x, ct.position.y);
-            map[pos].Remove(ct.gameObject);
+            if (ct.gameObject.GetComponent<Block>().isSolid) {
+                Vector2 pos = new Vector2(ct.position.x, ct.position.y);
+                map[pos].Remove(ct.gameObject);
+            }
+        }
+    }
+
+    public void UpdateSprites (int xMin, int yMin, int xMax, int yMax) {
+        for (int x = xMin; x <= xMax; x++) {
+            for (int y = yMin; y <= yMax; y++) {
+                Vector2 pos = new Vector2(x, y);
+                if (map.ContainsKey(pos) && map[pos].Count > 0) {
+                    map[pos].Last.Value.GetComponent<Block>().UpdateSprite();
+                }
+            }
         }
     }
 
