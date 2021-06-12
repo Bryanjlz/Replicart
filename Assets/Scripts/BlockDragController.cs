@@ -40,6 +40,7 @@ public class BlockDragController : Draggable
             Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
             transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1f);
         }
+        GameObject.Find("Canvas").GetComponent<LevelManager>().CheckWin();
     }
 }
 

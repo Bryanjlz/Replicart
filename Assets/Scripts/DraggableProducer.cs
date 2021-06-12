@@ -14,9 +14,6 @@ public class DraggableProducer : MonoBehaviour
     public Map map;
     public Transform playerGroupParent;
 
-
-    private const float DIMENSIONS = 50f;
-
     private void Start() {
         map = GameObject.Find("Map").GetComponent<Map>();
         playerGroupParent = GameObject.Find("Player Groups").transform;

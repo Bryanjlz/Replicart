@@ -15,9 +15,11 @@ public class Map : MonoBehaviour
     [SerializeField]
     Sprite[] sprites;
 
+    [SerializeField]
+    Shader greyScale;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         map = new Dictionary<Vector2, List<GameObject>>();
 
@@ -27,7 +29,9 @@ public class Map : MonoBehaviour
         // Load Level Group Blocks
         foreach (Transform gt in levelGroups.transform) {
             AddGroup(gt.gameObject);
-            foreach(Transform bt in gt) {
+            foreach (Transform bt in gt) {
+                bt.gameObject.GetComponent<Block>().colour = Colour.BLUE;
+                bt.gameObject.GetComponent<SpriteRenderer>().material.shader = greyScale;
                 bt.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
@@ -133,13 +137,16 @@ public class Map : MonoBehaviour
                     for (int i = 0; i < map[pos].Count; i++) {
                         Block block = map[pos][i].GetComponent<Block>();
                         SpriteRenderer sr = block.spriteRenderer;
+                        BoxCollider2D bc = map[pos][i].GetComponent<BoxCollider2D>();
 
                         block.layer = i;
                         block.spriteRenderer.sortingOrder = i;
                         sr.enabled = false;
+                        bc.enabled = false;
                         if (i == map[pos].Count - 1) {
                             block.CheckMapSurroundings();
                             sr.enabled = true;
+                            bc.enabled = true;
                         }
                     }
                 }

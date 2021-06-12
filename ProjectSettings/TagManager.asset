@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Solution
+    uniqueID: 2374749763
+    locked: 0

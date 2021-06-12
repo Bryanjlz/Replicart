@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 public class LevelSelectButton : MonoBehaviour
 {
     [Header("values set by scripts")]
-    public int loadIndex;
     public string levelName;
     public LevelSelect manager;
 
     public void Load() {
-        SceneManager.LoadScene(loadIndex);
+        SceneManager.LoadScene(levelName);
     }
 
     public void SetTitle() {
-        manager.SetTitle(levelName);
+        manager.SetTitle(levelName.ToUpperInvariant());
     }
 }
