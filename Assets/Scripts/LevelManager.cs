@@ -5,9 +5,11 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
 
-    [Header("Set in Editor")]
+    [Header("Set in Editor (UI)")]
     public GameObject pauseMenu;
     public GameObject winScreen;
+    [Header("Set in Editor (In game)")]
+    public WinTrigger winFlag;
     
     [Header("Internal Values")]
     public bool isPaused;
@@ -16,6 +18,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         isPaused = false;
+        winFlag.manager = this;
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void Replay() {
-        
+
     }
 
     public void Lose() {
