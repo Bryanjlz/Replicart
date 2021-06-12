@@ -143,8 +143,8 @@ MonoBehaviour:
   text: {fileID: 1806014077054962524}
   amount: 1
   validSpace:
-    m_Center: {x: -1.205835, y: 0.1777401, z: 0}
-    m_Extent: {x: 6.689225, y: 4.1778393, z: 0}
+    m_Center: {x: -2.5, y: -1, z: 0}
+    m_Extent: {x: 6, y: 3.5, z: 0}
   map: {fileID: 0}
   playerGroupParent: {fileID: 0}
 --- !u!114 &6304319555143975258
