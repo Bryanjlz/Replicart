@@ -352,6 +352,17 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!114 &40612619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8004145088611224313, guid: effcc12971c58a14b8d8d7755a03e9d5, type: 3}
+  m_PrefabInstance: {fileID: 836402565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdda366660aeb1142a58199b8d9e7143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &47347779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1507,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1789918235}
   winScreen: {fileID: 1182725000}
-  map: {fileID: 0}
+  map: {fileID: 40612619}
+  expectedSolution: {fileID: 758878260}
   isPaused: 0
 --- !u!1 &203518912
 GameObject:
@@ -4666,7 +4678,7 @@ GameObject:
   - component: {fileID: 758878259}
   - component: {fileID: 758878260}
   m_Layer: 0
-  m_Name: Win Check
+  m_Name: Expected Solution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4711,6 +4723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7ba944669321a4ea8b23d086f2667e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 40612619}
 --- !u!1 &761164763
 GameObject:
   m_ObjectHideFlags: 0
