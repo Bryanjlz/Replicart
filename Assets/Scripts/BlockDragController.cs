@@ -8,15 +8,29 @@ public class BlockDragController : Draggable
     public Bounds validSpace;
     public DraggableProducer source;
 
+    // rectangle places
+    private Vector2 lleft;
+    private Vector2 uleft;
+    private Vector2 lright;
+    private Vector2 uright;
+
     public override void Release() {
-        if (!validSpace.Intersects(GetComponent<BoxCollider2D>().bounds)) {
+
+        BoxCollider2D my_box = GetComponent<BoxCollider2D>();
+
+        lleft = new Vector2(my_box.bounds.min.x, my_box.bounds.min.y );
+        uleft = new Vector2(my_box.bounds.min.x, my_box.bounds.max.y );
+        lright = new Vector2(my_box.bounds.max.x, my_box.bounds.min.y );
+        uright = new Vector2(my_box.bounds.max.x, my_box.bounds.max.y );
+
+        if (validSpace.Contains(lleft) && validSpace.Contains(lright) && validSpace.Contains(uleft) && validSpace.Contains(uright)) {
+            print(my_box.bounds);
+            print(validSpace);
+        } else {
             print("Aw no");
-            source.amount ++;
+            source.amount++;
             map.RemoveGroup(gameObject);
             Destroy(gameObject);
-        } else {
-            print(GetComponent<BoxCollider2D>().bounds);
-            print(validSpace);
         }
 
         isBeingHeld = false;

@@ -8,10 +8,12 @@ public class DraggableProducer : MonoBehaviour
     public GameObject previewBlockPrefab;
     public GameObject produce;
     public int amount;
+
     public Bounds validSpace;
 
     public Map map;
     public Transform playerGroupParent;
+
 
     private const float DIMENSIONS = 50f;
 
