@@ -59,7 +59,6 @@ public class LevelSelect : MonoBehaviour
             if (i < levelCount) {
                 GameObject go = Instantiate(levelPrefab, levelGridLayout);
                 go.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = string.Format("{0}", i + 1);
-                go.GetComponent<LevelSelectButton>().loadIndex = i;
                 go.GetComponent<LevelSelectButton>().manager = this;
                 if (i < levelNames.Count) {
                     go.GetComponent<LevelSelectButton>().levelName = levelNames[i];
