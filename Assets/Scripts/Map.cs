@@ -5,7 +5,7 @@ using UnityEngine;
 public class Map : MonoBehaviour
 {
     [SerializeField]
-    public Dictionary<Vector2, LinkedList<GameObject>> map;
+    public Dictionary<Vector2, List<GameObject>> map;
 
     [SerializeField]
     GameObject levelGroups;
@@ -19,7 +19,7 @@ public class Map : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        map = new Dictionary<Vector2, LinkedList<GameObject>>();
+        map = new Dictionary<Vector2, List<GameObject>>();
 
         // Load Sprites
         LoadSprites();
@@ -71,10 +71,11 @@ public class Map : MonoBehaviour
                 }
 
                 if (map.ContainsKey(pos)) {
-                    map[pos].AddLast(ct.gameObject);
+                    map[pos].Add(ct.gameObject);
+                    ct.gameObject.GetComponent<Block>().layer = map[pos].Count - 1;
                 } else {
-                    LinkedList<GameObject> blockLayers = new LinkedList<GameObject>();
-                    blockLayers.AddLast(ct.gameObject);
+                    List<GameObject> blockLayers = new List<GameObject>();
+                    blockLayers.Add(ct.gameObject);
                     map.Add(pos, blockLayers);
                 }
             }
@@ -83,12 +84,31 @@ public class Map : MonoBehaviour
     }
 
     public void RemoveGroup (GameObject group) {
+        int xMax = -100000;
+        int yMax = -100000;
+        int xMin = 100000;
+        int yMin = 100000;
         foreach (Transform ct in group.transform) {
+            float x = ct.position.x;
+            float y = ct.position.y;
+            Vector2 pos = new Vector2(x, y);
+            if (y < yMin) {
+                yMin = (int)y;
+            }
+            if (y > yMax) {
+                yMax = (int)y;
+            }
+            if (x < xMin) {
+                xMin = (int)x;
+            }
+            if (x > xMax) {
+                xMax = (int)x;
+            }
             if (ct.gameObject.GetComponent<Block>().isSolid) {
-                Vector2 pos = new Vector2(ct.position.x, ct.position.y);
                 map[pos].Remove(ct.gameObject);
             }
         }
+        UpdateSprites(xMin, yMin, xMax, yMax);
     }
 
     public void UpdateSprites (int xMin, int yMin, int xMax, int yMax) {
@@ -96,7 +116,16 @@ public class Map : MonoBehaviour
             for (int y = yMin; y <= yMax; y++) {
                 Vector2 pos = new Vector2(x, y);
                 if (map.ContainsKey(pos) && map[pos].Count > 0) {
-                    map[pos].Last.Value.GetComponent<Block>().UpdateSprite();
+                    for (int i = 0; i < map[pos].Count; i++) {
+                        Block block = map[pos][i].GetComponent<Block>();
+                        if (i == map[pos].Count - 1) {
+                            block.UpdateSprite();
+                        }
+                        block.layer = i;
+                        block.spriteRenderer.sortingOrder = i;
+
+
+                    }
                 }
             }
         }
@@ -104,7 +133,7 @@ public class Map : MonoBehaviour
 
     public void Render () {
         foreach (Vector2 pos in map.Keys) {
-            GameObject block = map[pos].Last.Value;
+            GameObject block = map[pos][map[pos].Count - 1];
             if (block.GetComponent<Block>().isSolid) {
                 block.GetComponent<BoxCollider2D>().enabled = true;
             }

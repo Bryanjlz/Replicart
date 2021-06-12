@@ -9,6 +9,17 @@ public class Draggable : MonoBehaviour {
     private float displacementY;
     public bool isBeingHeld = false;
 
+    [Header("Do not touch")]
+    public Map map;
+
+    private void Start() {
+        map = GameObject.Find("Map").GetComponent<Map>();
+        print(map);
+        if (map == null) {
+            print("WHAT THE HELL");
+        }
+    }
+
     private void OnMouseDown()
     {
         PickUp();
@@ -34,10 +45,25 @@ public class Draggable : MonoBehaviour {
         
     }
 
-    public void PickUp() {
+    public void FirstPickUp() {
         isBeingHeld = true;
-        displacementX = this.gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
-        displacementY = this.gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
+        displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
+        displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
+
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.3f);
+        }
+    }
+
+    public void PickUp() {
+        map.RemoveGroup(gameObject);
+        isBeingHeld = true;
+        displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
+        displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
+
 
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -47,6 +73,7 @@ public class Draggable : MonoBehaviour {
     }
 
     protected virtual void Release() {
+        map.AddGroup(gameObject);
         isBeingHeld = false;
 
         for (int i = 0; i < transform.childCount; i++)
