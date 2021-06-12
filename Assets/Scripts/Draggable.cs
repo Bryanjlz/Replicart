@@ -14,10 +14,6 @@ public class Draggable : MonoBehaviour {
 
     private void Start() {
         map = GameObject.Find("Map").GetComponent<Map>();
-        print(map);
-        if (map == null) {
-            print("WHAT THE HELL");
-        }
     }
 
     private void OnMouseDown()

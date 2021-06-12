@@ -14,7 +14,7 @@ public class DraggableProducer : MonoBehaviour
             float mousePosY = (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
             GameObject go = Instantiate(produce, new Vector3(mousePosX, mousePosY, 0), Quaternion.identity);
             // LOL
-            go.GetComponent<BlockDragController>().PickUp();
+            go.GetComponent<BlockDragController>().FirstPickUp();
             go.GetComponent<BlockDragController>().validSpace = validSpace;
             go.GetComponent<BlockDragController>().source = this;
             amount --;

@@ -18,6 +18,7 @@ public class BlockDragController : Draggable
             print(validSpace);
         }
 
+        map.AddGroup(gameObject);
         isBeingHeld = false;
 
         for (int i = 0; i < transform.childCount; i++)
