@@ -15,6 +15,8 @@ public class Map : MonoBehaviour
     [SerializeField]
     Sprite[] sprites;
 
+    [SerializeField]
+    Shader greyScale;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,7 +29,9 @@ public class Map : MonoBehaviour
         // Load Level Group Blocks
         foreach (Transform gt in levelGroups.transform) {
             AddGroup(gt.gameObject);
-            foreach(Transform bt in gt) {
+            foreach (Transform bt in gt) {
+                bt.gameObject.GetComponent<Block>().colour = Colour.BLUE;
+                bt.gameObject.GetComponent<SpriteRenderer>().material.shader = greyScale;
                 bt.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
