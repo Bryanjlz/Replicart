@@ -80,7 +80,7 @@ public class Map : MonoBehaviour
                 }
             }
         }
-        UpdateSprites(xMin, yMin, xMax, yMax);
+        UpdateSprites(xMin - 1, yMin - 1, xMax + 1, yMax + 1);
     }
 
     public void RemoveGroup (GameObject group) {
@@ -108,7 +108,7 @@ public class Map : MonoBehaviour
                 map[pos].Remove(ct.gameObject);
             }
         }
-        UpdateSprites(xMin, yMin, xMax, yMax);
+        UpdateSprites(xMin - 1, yMin - 1, xMax + 1, yMax + 1);
     }
 
     public void UpdateSprites (int xMin, int yMin, int xMax, int yMax) {
