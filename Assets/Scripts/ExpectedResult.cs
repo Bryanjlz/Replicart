@@ -15,9 +15,10 @@ public class ExpectedResult : MonoBehaviour
         foreach (Transform child in transform) {
             solution[new Vector2((int) child.position.x, (int) child.position.y)] = child.GetComponent<Block>();
             Color current = child.GetComponent<SpriteRenderer>().color;
-            child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.1f);
+            child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.2f);
             child.GetComponent<BoxCollider2D>().enabled = false;
             child.GetComponent<Block>().isSolid = false;
+            child.GetComponent<SpriteRenderer>().sortingLayerName = "Solution";
         }
 
         foreach (Vector2 pos in solution.Keys) {

@@ -49,7 +49,7 @@ public class Draggable : MonoBehaviour {
         for (int i = 0; i < transform.childCount; i++)
         {
             Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
-            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.3f);
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.7f);
         }
 
         map.RemoveGroup(gameObject);
