@@ -15,8 +15,9 @@ public class Block : MonoBehaviour
 
     string spriteType;
 
-    private void Start() {
+    private void Awake() {
         map = GameObject.Find("Map").GetComponent<Map>();
+        print(map);
         if (isSolid) {
             GetComponent<SpriteRenderer>().enabled = true;
         } else {
@@ -24,7 +25,7 @@ public class Block : MonoBehaviour
         }
     }
 
-    void UpdateSpriteType () {
+    public void UpdateSprite () {
         spriteType = "";
         // Made the mistake of doing the check clockwise :(
 
@@ -37,23 +38,24 @@ public class Block : MonoBehaviour
         spriteType += CheckPos(1, 0);
 
         // Check bottom 3
-        for (int xOff = 1; xOff < -2; xOff--) {
+        for (int xOff = 1; xOff > -2; xOff--) {
             spriteType += CheckPos(xOff, -1);
         }
 
         // Check middle left
         spriteType += CheckPos(-1, 0);
 
-        // Get new sprite
-
+        print(this +" " +  spriteType);
+        // Set new sprite
+        spriteRenderer.sprite = map.spriteTree.Get(spriteType);
     }
 
     private string CheckPos (int xOff, int yOff) {
-        Vector2 pos = transform.position;
-        if (map.map[new Vector2(pos.x + xOff, pos.y + yOff)].Count > 0) {
-            return "1";
+        Vector2 pos = new Vector2(transform.position.x + xOff, transform.position.y + yOff);
+        if (map.map.ContainsKey(pos) && map.map[pos].Count > 0) {
+            return "0";
         }
-        return "0";
+        return "1";
     }
 
 
