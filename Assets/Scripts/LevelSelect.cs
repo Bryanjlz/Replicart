@@ -19,8 +19,7 @@ public class LevelSelect : MonoBehaviour
 
     //public List<Scene> levels;
     public int levelIndexStart, levelIndexEnd;
-    [Tooltip("I'm sorry")]
-    public List<string> levelNames;
+    List<string> levelNames;
 
     //Mock values
     [Header("Debug, do not edit.")]
@@ -41,6 +40,16 @@ public class LevelSelect : MonoBehaviour
     }
 
     void LoadLevels() {
+        //Get levels
+        levelNames = new List<string>();
+        for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++) {
+            string currentScene = SceneUtility.GetScenePathByBuildIndex(i);
+            currentScene = currentScene.Substring(currentScene.LastIndexOf("/") + 1, currentScene.LastIndexOf(".") - currentScene.LastIndexOf("/") - 1);
+            if (!currentScene.Equals("Level Select") && !currentScene.Equals("Main Menu")) {
+                levelNames.Add(currentScene);
+            }
+        }
+
         int startIndex = pageNumber * (COLS * ROWS);
         print(startIndex);
         foreach (Transform child in levelGridLayout) {
