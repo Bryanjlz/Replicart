@@ -133,13 +133,16 @@ public class Map : MonoBehaviour
                     for (int i = 0; i < map[pos].Count; i++) {
                         Block block = map[pos][i].GetComponent<Block>();
                         SpriteRenderer sr = block.spriteRenderer;
+                        BoxCollider2D bc = map[pos][i].GetComponent<BoxCollider2D>();
 
                         block.layer = i;
                         block.spriteRenderer.sortingOrder = i;
                         sr.enabled = false;
+                        bc.enabled = false;
                         if (i == map[pos].Count - 1) {
                             block.CheckMapSurroundings();
                             sr.enabled = true;
+                            bc.enabled = true;
                         }
                     }
                 }
