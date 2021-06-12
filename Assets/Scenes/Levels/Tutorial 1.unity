@@ -2617,6 +2617,22 @@ PrefabInstance:
       propertyPath: produce
       value: 
       objectReference: {fileID: 4829983471904085774, guid: f81b5e4ff49b57c4b9edf96320e6ccc7, type: 3}
+    - target: {fileID: 6304319555143975252, guid: 8f1c3f42d277434438ba9d7b13b84547, type: 3}
+      propertyPath: validSpace.m_Center.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304319555143975252, guid: 8f1c3f42d277434438ba9d7b13b84547, type: 3}
+      propertyPath: validSpace.m_Center.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304319555143975252, guid: 8f1c3f42d277434438ba9d7b13b84547, type: 3}
+      propertyPath: validSpace.m_Extent.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304319555143975252, guid: 8f1c3f42d277434438ba9d7b13b84547, type: 3}
+      propertyPath: validSpace.m_Extent.y
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6304319555143975256, guid: 8f1c3f42d277434438ba9d7b13b84547, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9625,7 +9641,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3436417, g: 0.11992703, b: 0.5188679, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

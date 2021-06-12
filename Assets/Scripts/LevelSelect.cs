@@ -29,7 +29,6 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelCount = levelIndexEnd - levelIndexStart + 1;
         LoadLevels();
     }
 
@@ -49,6 +48,7 @@ public class LevelSelect : MonoBehaviour
                 levelNames.Add(currentScene);
             }
         }
+        levelCount = levelNames.Count;
 
         int startIndex = pageNumber * (COLS * ROWS);
         print(startIndex);
