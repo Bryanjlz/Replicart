@@ -18,16 +18,22 @@ public class DraggableProducer : MonoBehaviour
     private void Start() {
         map = GameObject.Find("Map").GetComponent<Map>();
         playerGroupParent = GameObject.Find("Player Groups").transform;
+
+        // Get hitbox to see the size of the group
         BoxCollider2D hitBox = produce.GetComponent<BoxCollider2D>();
         float xGrid = hitBox.size.x;
         float yGrid = hitBox.size.y;
 
-        print(xGrid + " " + yGrid);
+        // Instantiate arr to mimic how we used map (added space around to not deal with out of bounds)
         GameObject[][] blocks = new GameObject[(int)xGrid + 2][];
         for (int i = 0; i < blocks.Length; i++) {
             blocks[i] = new GameObject[(int)yGrid + 2];
         }
+
+        // Dimensions of one preview block
         float ratioDimension = 12.5f;
+
+        // Gets the minimum x and y values for the position of the gameobjects, used to translate the coordinates to array indices
         float xMin = 100000;
         float yMin = 100000;
         foreach (Transform bt in produce.transform) {
@@ -39,13 +45,22 @@ public class DraggableProducer : MonoBehaviour
             }
         }
 
+        // coordinates for the bottom left corner
         float xStart = -(xGrid / 2) * ratioDimension + ratioDimension / 2;
         float yStart = -(yGrid / 2) * ratioDimension + ratioDimension / 2;
+
         foreach (Transform bt in produce.transform) {
+            // Actual position of the preview block
             float xPos = xStart + ratioDimension * (bt.position.x - xMin);
             float yPos = yStart + ratioDimension * (bt.position.y - yMin);
+
+            // Instantiate
             GameObject newBlock = Instantiate(previewBlockPrefab);
+
+            // Add to pseudo-map
             blocks[(int)(bt.position.x - xMin + 1)][(int)(bt.position.y - yMin + 1)] = newBlock;
+
+            // Edit the transform for scale and position
             RectTransform rt = newBlock.GetComponent<RectTransform>();
             rt.SetParent(gameObject.transform);
             rt.sizeDelta = new Vector2(ratioDimension, ratioDimension);
@@ -53,6 +68,7 @@ public class DraggableProducer : MonoBehaviour
             rt.localScale = new Vector3(1f, 1f, 1f);
         }
 
+        // Gets the right sprite through using the pseudo map
         for (int x = 1; x < blocks.Length - 1; x++) {
             for (int y = 1; y < blocks[0].Length - 1; y++) {
                 if (blocks[x][y] != null) {
@@ -99,8 +115,8 @@ public class DraggableProducer : MonoBehaviour
                     }
 
                     // Set new sprite
-                    print(spriteType);
-                    blocks[x][y].GetComponent<Image>().sprite = map.spriteTrees[(int)2].Get(spriteType);
+                    Colour colour = Colour.BLUE;
+                    blocks[x][y].GetComponent<Image>().sprite = map.spriteTrees[(int)colour].Get(spriteType);
                 }
             }
         }
