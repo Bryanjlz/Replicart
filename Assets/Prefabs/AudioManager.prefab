@@ -50,9 +50,51 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: snap
+  - name: snap1
+    clip: {fileID: 8300000, guid: 10fc4ba48b92ad840992540eb29dd3eb, type: 3}
+    volume: 0.211
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snap2
+    clip: {fileID: 8300000, guid: 2ee6a38802ab646499704f6db65bf743, type: 3}
+    volume: 0.199
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snap3
+    clip: {fileID: 8300000, guid: 3ed4a4d0420735c46a7920e256b537bc, type: 3}
+    volume: 0.208
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snap4
+    clip: {fileID: 8300000, guid: 7c167b92c381aa343a84f80054bce39c, type: 3}
+    volume: 0.196
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snap5
+    clip: {fileID: 8300000, guid: 249f72a51aceca3428283533075d0614, type: 3}
+    volume: 0.193
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snap6
+    clip: {fileID: 8300000, guid: 1cade058fed68bf4eb162a8a88c1d3a2, type: 3}
+    volume: 0.205
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: win
+    clip: {fileID: 8300000, guid: 5fbdeb96d27209349a71b27ec6d4722c, type: 3}
+    volume: 0.613
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: click
     clip: {fileID: 8300000, guid: c2bcc9238fe3c5f4690ce50d7a1a710c, type: 3}
-    volume: 1
+    volume: 0.401
     pitch: 1
     loop: 0
     source: {fileID: 0}
