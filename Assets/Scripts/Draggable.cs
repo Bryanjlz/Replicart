@@ -12,7 +12,7 @@ public class Draggable : MonoBehaviour {
     [Header("Do not touch")]
     public Map map;
 
-    private void Start() {
+    private void Awake() {
         map = GameObject.Find("Map").GetComponent<Map>();
     }
 
@@ -39,6 +39,8 @@ public class Draggable : MonoBehaviour {
     }
 
     public void PickUp() {
+        map.RemoveGroup(gameObject);
+        map.AddGroup(gameObject);
         isBeingHeld = true;
         displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
         displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
