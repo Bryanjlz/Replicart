@@ -39,11 +39,11 @@ public class Draggable : MonoBehaviour {
     }
 
     public void PickUp() {
-        map.RemoveGroup(gameObject);
-        map.AddGroup(gameObject);
+
         isBeingHeld = true;
         displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
         displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
+        print((int)(Camera.main.ScreenToWorldPoint(Input.mousePosition)).x + " " + (int)(Camera.main.ScreenToWorldPoint(Input.mousePosition)).y);
 
 
         for (int i = 0; i < transform.childCount; i++)
@@ -51,6 +51,9 @@ public class Draggable : MonoBehaviour {
             Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
             transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.3f);
         }
+
+        map.RemoveGroup(gameObject);
+        map.AddGroup(gameObject);
     }
 
     public virtual void Release() {
