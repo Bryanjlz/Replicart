@@ -12,6 +12,7 @@ public class BlockDragController : Draggable
         if (!validSpace.Intersects(GetComponent<BoxCollider2D>().bounds)) {
             print("Aw no");
             source.amount ++;
+            map.RemoveGroup(gameObject);
             Destroy(gameObject);
         } else {
             print(GetComponent<BoxCollider2D>().bounds);

@@ -10,13 +10,7 @@ public class Map : MonoBehaviour
     [SerializeField]
     GameObject levelGroups;
     [SerializeField]
-    public SpriteTree spriteTree;
-    [SerializeField]
-    public SpriteTree spriteTreeG;
-    [SerializeField]
-    public SpriteTree spriteTreeR;
-    [SerializeField]
-    public SpriteTree spriteTreeY;
+    public List<SpriteTree> spriteTrees;
 
     [SerializeField]
     Sprite[] sprites;
@@ -38,20 +32,20 @@ public class Map : MonoBehaviour
     }
 
     private void LoadSprites () {
-        spriteTree = CreateTree(new SpriteTree(), 8);
-        spriteTreeG = CreateTree(new SpriteTree(), 8);
-        spriteTreeR = CreateTree(new SpriteTree(), 8);
-        spriteTreeY = CreateTree(new SpriteTree(), 8);
+        spriteTrees = new List<SpriteTree>();
+        for (int i = 0; i < 4; i++) {
+            spriteTrees.Add(CreateTree(new SpriteTree(), 8));
+        }
 
         foreach (Sprite s in sprites) {
             if (s.name.Substring(0, 1).Equals("b")) {
-                spriteTree.Add(s, s.name.Substring(1));
+                spriteTrees[(int)Colour.BLUE].Add(s, s.name.Substring(1));
             } else if (s.name.Substring(0, 1).Equals("g")) {
-                spriteTreeG.Add(s, s.name.Substring(1));
+                spriteTrees[(int)Colour.GREEN].Add(s, s.name.Substring(1));
             } else if (s.name.Substring(0, 1).Equals("r")) {
-                spriteTreeR.Add(s, s.name.Substring(1));
+                spriteTrees[(int)Colour.RED].Add(s, s.name.Substring(1));
             } else {
-                spriteTreeY.Add(s, s.name.Substring(1));
+                spriteTrees[(int)Colour.YELLOW].Add(s, s.name.Substring(1));
             }
         }
     }
