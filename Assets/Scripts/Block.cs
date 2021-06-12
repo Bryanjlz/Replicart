@@ -90,7 +90,6 @@ public class Block : MonoBehaviour
             spriteType += "1";
         }
 
-        print(this +" " +  spriteType);
         // Set new sprite
         if (spriteRenderer.sprite.name.Substring(0,1).Equals("b")) {
             spriteRenderer.sprite = map.spriteTree.Get(spriteType);

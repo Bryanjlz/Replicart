@@ -12,13 +12,12 @@ public class BlockDragController : Draggable
         if (!validSpace.Intersects(GetComponent<BoxCollider2D>().bounds)) {
             print("Aw no");
             source.amount ++;
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         } else {
             print(GetComponent<BoxCollider2D>().bounds);
             print(validSpace);
         }
 
-        map.AddGroup(gameObject);
         isBeingHeld = false;
 
         for (int i = 0; i < transform.childCount; i++)

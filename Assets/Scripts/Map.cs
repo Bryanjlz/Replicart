@@ -136,13 +136,15 @@ public class Map : MonoBehaviour
                 if (map.ContainsKey(pos) && map[pos].Count > 0) {
                     for (int i = 0; i < map[pos].Count; i++) {
                         Block block = map[pos][i].GetComponent<Block>();
-                        if (i == map[pos].Count - 1) {
-                            block.UpdateSprite();
-                        }
+                        SpriteRenderer sr = block.spriteRenderer;
+
                         block.layer = i;
                         block.spriteRenderer.sortingOrder = i;
-
-
+                        sr.enabled = false;
+                        if (i == map[pos].Count - 1) {
+                            block.UpdateSprite();
+                            sr.enabled = true;
+                        }
                     }
                 }
             }

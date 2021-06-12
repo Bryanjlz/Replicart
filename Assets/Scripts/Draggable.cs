@@ -32,7 +32,14 @@ public class Draggable : MonoBehaviour {
         mousePosY = (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
         if (isBeingHeld == true)
         {
-            this.gameObject.transform.localPosition = new Vector3((int) (mousePosX + displacementX), (int) (mousePosY + displacementY), 0);
+            int xMove = (int)(mousePosX + displacementX);
+            int yMove = (int)(mousePosY + displacementY);
+            if (xMove != gameObject.transform.localPosition.x || yMove != gameObject.transform.localPosition.y) {
+                map.RemoveGroup(gameObject);
+                gameObject.transform.localPosition = new Vector3(xMove, yMove, 0);
+                map.AddGroup(gameObject);
+
+            }
             //This makes no sense lol
             if (Input.GetMouseButtonUp(0)) {
                 Release();
@@ -41,21 +48,7 @@ public class Draggable : MonoBehaviour {
         
     }
 
-    public void FirstPickUp() {
-        isBeingHeld = true;
-        displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
-        displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
-
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
-            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.3f);
-        }
-    }
-
     public void PickUp() {
-        map.RemoveGroup(gameObject);
         isBeingHeld = true;
         displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
         displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
@@ -69,7 +62,6 @@ public class Draggable : MonoBehaviour {
     }
 
     protected virtual void Release() {
-        map.AddGroup(gameObject);
         isBeingHeld = false;
 
         for (int i = 0; i < transform.childCount; i++)
