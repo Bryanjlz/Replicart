@@ -33,7 +33,7 @@ public class Block : MonoBehaviour
         }
     }
 
-    public void UpdateSprite () {
+    public void CheckMapSurroundings () {
         spriteType = "";
         // Made the mistake of doing the check clockwise :(
 
@@ -53,6 +53,11 @@ public class Block : MonoBehaviour
         // Check middle left
         surrounds[0][1] = CheckPos(-1, 0);
 
+        //Update Sprite
+        UpdateSprite();
+    }
+
+    public void UpdateSprite () {
         if (surrounds[0][1] && surrounds[0][2] && surrounds[1][2]) {
             spriteType += "0";
         } else {
@@ -96,7 +101,6 @@ public class Block : MonoBehaviour
 
         // Set new sprite
         spriteRenderer.sprite = map.spriteTrees[(int)colour].Get(spriteType);
-        
     }
 
     private bool CheckPos (int xOff, int yOff) {

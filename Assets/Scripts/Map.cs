@@ -138,7 +138,7 @@ public class Map : MonoBehaviour
                         block.spriteRenderer.sortingOrder = i;
                         sr.enabled = false;
                         if (i == map[pos].Count - 1) {
-                            block.UpdateSprite();
+                            block.CheckMapSurroundings();
                             sr.enabled = true;
                         }
                     }

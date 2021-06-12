@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c4f77309ab066408195efbc1fc949f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previewBlockPrefab: {fileID: 1344464486887550150, guid: f991082d0ebaaa748aca114ece0d0ce5, type: 3}
   produce: {fileID: 3564719089684985750, guid: d8ee1f6e895058c4c90e359fe81d60d6, type: 3}
   amount: 1
   validSpace:
