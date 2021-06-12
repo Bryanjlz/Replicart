@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 7995760506004470777
-    second: pixil-frame-13_0
+    second: r10111110
   - first:
       213: -7859926662612221576
-    second: pixil-frame-13_1
+    second: r11101010
   - first:
       213: -5212363232797581018
-    second: pixil-frame-13_2
+    second: r10101111
   - first:
       213: -1984767829401514766
-    second: pixil-frame-13_3
+    second: r10101011
   - first:
       213: 6805555371528919386
     second: pixil-frame-13_4
   - first:
       213: -2835040038305567272
-    second: pixil-frame-13_5
+    second: r10111010
   - first:
       213: -7156744706061197246
-    second: pixil-frame-13_6
+    second: r11111010
   - first:
       213: -1244916673403536235
-    second: pixil-frame-13_7
+    second: r10101110
   - first:
       213: -6525474547161834627
-    second: pixil-frame-13_8
+    second: r11101011
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-frame-13_0
+      name: r10111110
       rect:
         serializedVersion: 2
         x: 0
@@ -136,7 +136,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_1
+      name: r11101010
       rect:
         serializedVersion: 2
         x: 8
@@ -157,7 +157,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_2
+      name: r10101111
       rect:
         serializedVersion: 2
         x: 16
@@ -178,7 +178,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_3
+      name: r10101011
       rect:
         serializedVersion: 2
         x: 0
@@ -199,7 +199,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,7 +220,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_5
+      name: r10111010
       rect:
         serializedVersion: 2
         x: 16
@@ -241,7 +241,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_6
+      name: r11111010
       rect:
         serializedVersion: 2
         x: 0
@@ -262,7 +262,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_7
+      name: r10101110
       rect:
         serializedVersion: 2
         x: 8
@@ -283,7 +283,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-frame-13_8
+      name: r11101011
       rect:
         serializedVersion: 2
         x: 16
@@ -304,7 +304,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
