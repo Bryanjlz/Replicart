@@ -233,3 +233,4 @@ MonoBehaviour:
   - {fileID: 5446954783781757742, guid: f1d6965937db09c4fa7a43ade8b307fc, type: 3}
   - {fileID: -4278829943415012011, guid: f1d6965937db09c4fa7a43ade8b307fc, type: 3}
   - {fileID: 3634970708934733562, guid: f1d6965937db09c4fa7a43ade8b307fc, type: 3}
+  greyScale: {fileID: 4800000, guid: 3318519edf3beed48a8dbc7ebc4b7c18, type: 3}
