@@ -22,7 +22,6 @@ public class Block : MonoBehaviour
             surrounds[i] = new bool[3];
         }
         map = GameObject.Find("Map").GetComponent<Map>();
-        print(map);
         if (isSolid) {
             GetComponent<SpriteRenderer>().enabled = true;
         } else {

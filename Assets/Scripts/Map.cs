@@ -26,6 +26,7 @@ public class Map : MonoBehaviour
 
         // Load Level Group Blocks
         foreach (Transform gt in levelGroups.transform) {
+            print(gt.gameObject);
             AddGroup(gt.gameObject);
         }
     }
