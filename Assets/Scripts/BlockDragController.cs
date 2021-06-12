@@ -16,6 +16,9 @@ public class BlockDragController : Draggable
 
     public override void Release() {
 
+        int sound_choice = Random.Range(1, 7);
+        FindObjectOfType<AudioManager>().Play("snap" + sound_choice);
+
         BoxCollider2D my_box = GetComponent<BoxCollider2D>();
 
         lleft = new Vector2(my_box.bounds.min.x, my_box.bounds.min.y );

@@ -67,6 +67,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void Win() {
+        FindObjectOfType<AudioManager>().Play("win");
         winScreen.SetActive(true);
     }
 
