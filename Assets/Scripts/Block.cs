@@ -96,33 +96,6 @@ public class Block : MonoBehaviour
 
         // Set new sprite
         spriteRenderer.sprite = map.spriteTrees[(int)colour].Get(spriteType);
-        //switch (colour) {
-        //    case Colour.BLUE:
-        //        spriteRenderer.sprite = map.spriteTree.Get(spriteType);
-        //        break;
-        //    case Colour.GREEN:
-        //        spriteRenderer.sprite = map.spriteTreeG.Get(spriteType);
-        //        break;
-        //    case Colour.RED:
-        //        spriteRenderer.sprite = map.spriteTreeR.Get(spriteType);
-        //        break;
-        //    case Colour.YELLOW:
-        //        spriteRenderer.sprite = map.spriteTreeY.Get(spriteType);
-        //        break;
-        //    default:
-        //        print("send help");
-        //        break;
-        //}
-
-        //if (spriteRenderer.sprite.name.Substring(0,1).Equals("b")) {
-        //    spriteRenderer.sprite = map.spriteTree.Get(spriteType);
-        //} else if (spriteRenderer.sprite.name.Substring(0, 1).Equals("g")) {
-        //    spriteRenderer.sprite = map.spriteTreeG.Get(spriteType);
-        //} else if (spriteRenderer.sprite.name.Substring(0, 1).Equals("r")) {
-        //    spriteRenderer.sprite = map.spriteTreeR.Get(spriteType);
-        //} else {
-        //    spriteRenderer.sprite = map.spriteTreeY.Get(spriteType);
-        //}
         
     }
 
