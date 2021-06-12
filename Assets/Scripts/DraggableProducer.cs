@@ -12,6 +12,7 @@ public class DraggableProducer : MonoBehaviour
     public TextMeshProUGUI text;
 
     public int amount;
+
     public Bounds validSpace;
 
     public Map map;

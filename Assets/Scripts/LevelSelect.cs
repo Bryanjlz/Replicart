@@ -19,8 +19,7 @@ public class LevelSelect : MonoBehaviour
 
     //public List<Scene> levels;
     public int levelIndexStart, levelIndexEnd;
-    [Tooltip("I'm sorry")]
-    public List<string> levelNames;
+    List<string> levelNames;
 
     //Mock values
     [Header("Debug, do not edit.")]
@@ -30,7 +29,6 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelCount = levelIndexEnd - levelIndexStart + 1;
         LoadLevels();
     }
 
@@ -41,6 +39,17 @@ public class LevelSelect : MonoBehaviour
     }
 
     void LoadLevels() {
+        //Get levels
+        levelNames = new List<string>();
+        for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++) {
+            string currentScene = SceneUtility.GetScenePathByBuildIndex(i);
+            currentScene = currentScene.Substring(currentScene.LastIndexOf("/") + 1, currentScene.LastIndexOf(".") - currentScene.LastIndexOf("/") - 1);
+            if (!currentScene.Equals("Level Select") && !currentScene.Equals("Main Menu")) {
+                levelNames.Add(currentScene);
+            }
+        }
+        levelCount = levelNames.Count;
+
         int startIndex = pageNumber * (COLS * ROWS);
         print(startIndex);
         foreach (Transform child in levelGridLayout) {
@@ -50,7 +59,6 @@ public class LevelSelect : MonoBehaviour
             if (i < levelCount) {
                 GameObject go = Instantiate(levelPrefab, levelGridLayout);
                 go.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = string.Format("{0}", i + 1);
-                go.GetComponent<LevelSelectButton>().loadIndex = i;
                 go.GetComponent<LevelSelectButton>().manager = this;
                 if (i < levelNames.Count) {
                     go.GetComponent<LevelSelectButton>().levelName = levelNames[i];
