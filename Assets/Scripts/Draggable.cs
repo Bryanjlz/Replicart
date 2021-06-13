@@ -24,8 +24,8 @@ public class Draggable : MonoBehaviour {
 
         if (isBeingHeld == true)
         {
-            int xMove = (int)(mousePosX + displacementX);
-            int yMove = (int)(mousePosY + displacementY);
+            int xMove = (int)Mathf.Round(mousePosX + displacementX);
+            int yMove = (int)Mathf.Round(mousePosY + displacementY);
             if (xMove != gameObject.transform.localPosition.x || yMove != gameObject.transform.localPosition.y) {
                 map.RemoveGroup(gameObject);
                 gameObject.transform.localPosition = new Vector3(xMove, yMove, 0);

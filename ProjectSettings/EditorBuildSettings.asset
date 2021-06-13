@@ -62,4 +62,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Boomerang.unity
     guid: 60d9efbcae44f5c42a4f7a33a69414b9
+    path: Assets/Scenes/Levels/Deletion.unity
+    guid: 53ca47c25ddfd6a4d9f8c9aef522e528
   m_configObjects: {}
