@@ -19,7 +19,8 @@ public class ExpectedResult : MonoBehaviour
             child.GetComponent<BoxCollider2D>().enabled = false;
             child.GetComponent<Block>().isSolid = false;
             // Just in case
-            child.GetComponent<SpriteRenderer>().sortingLayerName = "Solution";
+            child.GetComponent<SpriteRenderer>().sortingLayerName = "Background";
+            child.GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
 
         foreach (Vector2 pos in solution.Keys) {
@@ -103,6 +104,7 @@ public class ExpectedResult : MonoBehaviour
     public void EmphasizePreview() {
         foreach (Transform child in transform) {
             Color current = child.GetComponent<SpriteRenderer>().color;
+            child.GetComponent<SpriteRenderer>().sortingLayerName = "Solution";
             child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1);
         }
     }
@@ -110,6 +112,7 @@ public class ExpectedResult : MonoBehaviour
     public void DeEmphasizePreview() {
         foreach (Transform child in transform) {
             Color current = child.GetComponent<SpriteRenderer>().color;
+            child.GetComponent<SpriteRenderer>().sortingLayerName = "Background";
             child.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.2f);
         }
     }
