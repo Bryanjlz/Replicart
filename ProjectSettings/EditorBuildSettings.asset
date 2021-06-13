@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Select.unity
     guid: 86b7e33b4ca986742a3e77dbb0315f38
   - enabled: 1
-    path: Assets/Scenes/Levels/Tutorial 1.unity
+    path: Assets/Scenes/Levels/New Artist.unity
     guid: 48d931504b275f3469210b0fc6a5828f
   - enabled: 1
-    path: Assets/Scenes/Levels/Tutorial 2.unity
+    path: Assets/Scenes/Levels/Merge.unity
     guid: f1e5f335082268041a8da8636345678b
   - enabled: 1
     path: Assets/Scenes/Levels/Heart.unity
