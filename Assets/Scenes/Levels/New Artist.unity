@@ -380,6 +380,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 750966073}
     m_Modifications:
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_lineSpacing
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_characterSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}

@@ -130,9 +130,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1509077215}
     m_Modifications:
+    - target: {fileID: 7511943300220458003, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458003, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_text
       value: YOU CAN JOIN BLOCKS TOGETHER TO CREATE DIFFERENT PATTERNS
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_lineSpacing
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_characterSpacing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_VerticalAlignment
