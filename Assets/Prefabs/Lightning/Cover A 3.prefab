@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingHeld: 0
+  isHighlighted: 0
   map: {fileID: 0}
   validSpace:
     m_Center: {x: 0, y: 0, z: 0}
@@ -85,6 +86,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8183396467282807362}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -147,6 +152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8183396467282807362}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_text
-      value: YOU CAN OVERLAP BLOCKS TO DRAW DIFFERENT PATTERNS
+      value: YOU CAN JOIN BLOCKS TOGETHER TO CREATE DIFFERENT PATTERNS
       objectReference: {fileID: 0}
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_VerticalAlignment
@@ -302,6 +302,18 @@ PrefabInstance:
     - target: {fileID: 5632157398679626103, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.36078432
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
