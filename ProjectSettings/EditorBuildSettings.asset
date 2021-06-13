@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/New Artist.unity
     guid: 48d931504b275f3469210b0fc6a5828f
   - enabled: 1
-    path: Assets/Scenes/Levels/Merge.unity
+    path: Assets/Scenes/Levels/Join Together.unity
     guid: f1e5f335082268041a8da8636345678b
   - enabled: 1
     path: Assets/Scenes/Levels/Deletion.unity
@@ -59,15 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Medic!.unity
     guid: 3dd26a59747e2ba40ab185803583cb8b
-  - enabled: 1
-    path: Assets/Scenes/Levels/4.unity
-    guid: 6eaa3433c47c5f94ab910faf2b2776f5
-  - enabled: 1
-    path: Assets/Scenes/Levels/Boomerang.unity
-    guid: 60d9efbcae44f5c42a4f7a33a69414b9
-  - enabled: 1
-    path: Assets/Scenes/Levels/Apple.unity
-    guid: ffc7a5dc65612f741ada68f638362ce8
   - enabled: 1
     path: Assets/Scenes/Levels/Lightning.unity
     guid: d603b80a3781c2b46918b176f7cb86d0
