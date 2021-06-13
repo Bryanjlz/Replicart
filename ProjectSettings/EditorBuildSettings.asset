@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Apple.unity
     guid: ffc7a5dc65612f741ada68f638362ce8
+  - enabled: 1
+    path: Assets/Scenes/Levels/Mondrian.unity
+    guid: f2423226618a7cd4ebdc8269b5349fc4
   m_configObjects: {}
