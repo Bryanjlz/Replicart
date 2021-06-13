@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Colours.unity
     guid: f4475bc2aaa009148bb30a3ddd4eba9f
   - enabled: 1
+    path: Assets/Scenes/Levels/Checkered.unity
+    guid: e6dcb6cbdb658f74d815395fde2e2823
+  - enabled: 1
     path: Assets/Scenes/Levels/4.unity
     guid: 6eaa3433c47c5f94ab910faf2b2776f5
   - enabled: 1
@@ -48,6 +51,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Lightning.unity
     guid: d603b80a3781c2b46918b176f7cb86d0
   - enabled: 1
-    path: Assets/Scenes/Levels/Tutorial Deletion.unity
-    guid: 53ca47c25ddfd6a4d9f8c9aef522e528
+    path: Assets/Scenes/Levels/Thatchwork.unity
+    guid: 721db2df42b83d142a5d25d72765a568
+  - enabled: 1
+    path: Assets/Scenes/Levels/House.unity
+    guid: 5047e4269c362c44c975bf20dd93b961
+  - enabled: 1
+    path: Assets/Scenes/Levels/Infinity.unity
+    guid: fbe66803463230f4f82edbd074179455
   m_configObjects: {}
