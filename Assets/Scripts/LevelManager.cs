@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public GameObject winScreen;
     public List<Button> buttons;
     public TextMeshProUGUI previewPrompt;
+    public TextMeshProUGUI levelTitle;
     public Button nextButton;
     [Header("Set in Editor (In game)")]
     public Map map;
@@ -29,6 +30,13 @@ public class LevelManager : MonoBehaviour
     {
         isPaused = false;
         winningState = false;
+        ShowLevelTitle();
+    }
+
+    void ShowLevelTitle () {
+        int lvlNum = SceneManager.GetActiveScene().buildIndex - 1;
+        string lvlName = SceneManager.GetActiveScene().name.ToUpperInvariant();
+        levelTitle.text = lvlNum + ". " + lvlName;
     }
 
     // Update is called once per frame
