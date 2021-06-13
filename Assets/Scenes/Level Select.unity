@@ -2143,7 +2143,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -2286,6 +2286,7 @@ MonoBehaviour:
   levelPrefab: {fileID: 7495207652401411434, guid: 0786d02569a56804bb351b95f5b08069, type: 3}
   gridFillerPrefab: {fileID: 9032032396156098464, guid: 4b3d9e2a5a059184394640c388664bcf, type: 3}
   titleText: {fileID: 338547288}
+  cam: {fileID: 1884873258}
   levelIndexStart: 0
   levelIndexEnd: 2
   pageNumber: 0

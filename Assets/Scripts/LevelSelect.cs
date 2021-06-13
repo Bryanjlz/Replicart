@@ -15,7 +15,8 @@ public class LevelSelect : MonoBehaviour
     public Button nextButton;
     public GameObject levelPrefab;
     public GameObject gridFillerPrefab;
-    public TextMeshProUGUI titleText; 
+    public TextMeshProUGUI titleText;
+    public Camera cam;
 
     //public List<Scene> levels;
     public int levelIndexStart, levelIndexEnd;
@@ -29,7 +30,10 @@ public class LevelSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Color[] colours = { new Color(224 / 255f, 166 / 255f, 175 / 255f), new Color(92 / 255f, 188 / 255f, 205 / 255f), 
+                            new Color (138/255f, 198/255f, 132/255f), new Color (219/255f, 199/255f, 156/255f)};
         LoadLevels();
+        cam.backgroundColor = colours[(int)(Random.value * 4)];
     }
 
     // Update is called once per frame
