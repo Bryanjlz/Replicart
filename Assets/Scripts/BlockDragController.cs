@@ -27,10 +27,7 @@ public class BlockDragController : Draggable
         uright = new Vector2(my_box.bounds.max.x, my_box.bounds.max.y );
 
         if (validSpace.Contains(lleft) && validSpace.Contains(lright) && validSpace.Contains(uleft) && validSpace.Contains(uright)) {
-            print(my_box.bounds);
-            print(validSpace);
         } else {
-            print("Aw no");
             if (source.amount != -1) {
                 source.ModifyAmount(1);
             }

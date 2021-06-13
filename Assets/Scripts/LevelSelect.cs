@@ -55,7 +55,6 @@ public class LevelSelect : MonoBehaviour
         levelCount = levelNames.Count;
 
         int startIndex = pageNumber * (COLS * ROWS);
-        print(startIndex);
         foreach (Transform child in levelGridLayout) {
             Destroy(child.gameObject);
         }

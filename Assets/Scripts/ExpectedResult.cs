@@ -89,7 +89,6 @@ public class ExpectedResult : MonoBehaviour
             }
 
             // Set new sprite
-            print(map);
             preview.GetComponent<SpriteRenderer>().sprite = map.spriteTrees[(int)preview.colour].Get(spriteType);
         }
     }
