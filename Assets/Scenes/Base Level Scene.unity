@@ -348,6 +348,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5632157398509360905, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398509360905, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b29e095f145f6c438ce81772c985d94, type: 3}
+    - target: {fileID: 5632157398509360905, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5632157398648205171, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_Enabled
       value: 0

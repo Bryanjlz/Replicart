@@ -226,6 +226,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.5176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.5411765
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
 --- !u!4 &248154941 stripped
@@ -240,6 +252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -499,6 +515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -657,6 +677,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -714,6 +738,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -776,6 +804,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -836,6 +868,14 @@ PrefabInstance:
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_text
       value: YOU CAN DRAG TILES OFF THE GRID TO REMOVE THEM
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_lineSpacing
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_characterSpacing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -1003,6 +1043,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1060,6 +1104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1117,6 +1165,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1174,6 +1226,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1231,6 +1287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1288,6 +1348,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248154941}
     m_Modifications:
+    - target: {fileID: 2033916936547432527, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+      propertyPath: colour
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033916936547432530, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
       propertyPath: m_RootOrder
       value: 2
