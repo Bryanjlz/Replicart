@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2816270512336582313}
   - component: {fileID: 7402989958174103808}
   - component: {fileID: 6981122594635023176}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingHeld: 0
+  isHighlighted: 0
   map: {fileID: 0}
   validSpace:
     m_Center: {x: 0, y: 0, z: 0}
