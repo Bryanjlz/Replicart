@@ -61,20 +61,17 @@ public class Draggable : MonoBehaviour {
     public void Highlight()
     {
         if (Input.GetMouseButton(0) == false) { 
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.5f);
+            foreach (Transform bt in transform) {
+                Color current = bt.GetComponent<SpriteRenderer>().color;
+                bt.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.5f);
             }
         }
     }
 
-    public void LowLight()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
-            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1f);
+    public void LowLight() {
+        foreach (Transform bt in transform) {
+            Color current = bt.GetComponent<SpriteRenderer>().color;
+            bt.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1f);
         }
     }
 
