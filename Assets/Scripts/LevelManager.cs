@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public GameObject winScreen;
     public List<Button> buttons;
     public TextMeshProUGUI previewPrompt;
+    public Button nextButton;
     [Header("Set in Editor (In game)")]
     public Map map;
     public ExpectedResult expectedSolution;
@@ -92,6 +93,10 @@ public class LevelManager : MonoBehaviour
 
     public void Win() {
         FindObjectOfType<AudioManager>().Play("win");
+        int next = SceneUtility.GetBuildIndexByScenePath(SceneManager.GetActiveScene().name) + 1;
+        if (next == SceneManager.sceneCountInBuildSettings) {
+            nextButton.interactable = false;
+        }
         winScreen.SetActive(true);
     }
 
@@ -112,6 +117,14 @@ public class LevelManager : MonoBehaviour
     public void Click()
     {
         FindObjectOfType<AudioManager>().Jank();
+    }
+
+    public void NextLevel() 
+    {
+        int next = SceneUtility.GetBuildIndexByScenePath(SceneManager.GetActiveScene().name) + 1;
+        if (next < SceneManager.sceneCountInBuildSettings) {
+            SceneManager.LoadScene(next);
+        }
     }
 
     IEnumerator WinInHalfSecond() {
