@@ -21,11 +21,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Tutorial 2.unity
     guid: f1e5f335082268041a8da8636345678b
   - enabled: 1
+    path: Assets/Scenes/Levels/Heart.unity
+    guid: a07c0d4c4dd0893418f3439465bbfa60
+  - enabled: 1
+    path: Assets/Scenes/Levels/Colours.unity
+    guid: f4475bc2aaa009148bb30a3ddd4eba9f
+  - enabled: 1
     path: Assets/Scenes/Levels/4.unity
     guid: 6eaa3433c47c5f94ab910faf2b2776f5
   - enabled: 1
-    path: Assets/Scenes/Levels/Heart.unity
-    guid: a07c0d4c4dd0893418f3439465bbfa60
+    path: Assets/Scenes/Levels/Positivity.unity
+    guid: b1bb7e6188b3e5c4a8e63cab4955b877
+  - enabled: 1
+    path: Assets/Scenes/Levels/Overlap.unity
+    guid: 40faf934e6bffad44b02e82f2281fcd8
   - enabled: 1
     path: Assets/Scenes/Levels/Loss.unity
     guid: 633b15f0394b135489739b49c2f0ad93

@@ -114,6 +114,15 @@ public class Block : MonoBehaviour
     private void OnMouseDown() {
         bdc.PickUp();
     }
+    private void OnMouseEnter() 
+    {
+        bdc.Highlight();
+    }
+
+    private void OnMouseExit()
+    {
+        bdc.LowLight();
+    }
 
     private void OnMouseUp() {
         bdc.Release();

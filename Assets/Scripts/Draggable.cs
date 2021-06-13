@@ -8,6 +8,7 @@ public class Draggable : MonoBehaviour {
     private float displacementX;
     private float displacementY;
     public bool isBeingHeld = false;
+    public bool isHighlighted = false;
 
     [Header("Do not touch")]
     public Map map;
@@ -20,6 +21,7 @@ public class Draggable : MonoBehaviour {
     {
         mousePosX = (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
         mousePosY = (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
+
         if (isBeingHeld == true)
         {
             int xMove = (int)(mousePosX + displacementX);
@@ -54,6 +56,26 @@ public class Draggable : MonoBehaviour {
 
         map.RemoveGroup(gameObject);
         map.AddGroup(gameObject);
+    }
+
+    public void Highlight()
+    {
+        if (Input.GetMouseButton(0) == false) { 
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.5f);
+            }
+        }
+    }
+
+    public void LowLight()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1f);
+        }
     }
 
     public virtual void Release() {
