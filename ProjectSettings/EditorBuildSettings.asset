@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Windows.unity
     guid: af5fd2a907f7ff64f8579bb0ab15f57d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Plus.unity
+    guid: 5a262d37a6e554647884012982aeca30
+  - enabled: 1
+    path: Assets/Scenes/Levels/Lightning.unity
+    guid: d603b80a3781c2b46918b176f7cb86d0
   m_configObjects: {}
