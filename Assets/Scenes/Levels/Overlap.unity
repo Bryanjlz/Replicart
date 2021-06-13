@@ -950,10 +950,46 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5632157397670249403, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397670249403, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397670249403, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397842874983, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397842874983, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397842874983, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
+      objectReference: {fileID: 0}
     - target: {fileID: 5632157398208649880, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: grid
       value: 
       objectReference: {fileID: 1415353076}
+    - target: {fileID: 5632157398330168788, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398330168788, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398330168788, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
+      objectReference: {fileID: 0}
     - target: {fileID: 5632157398462590246, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_Name
       value: Level Template
@@ -1002,6 +1038,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5632157398475878492, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398475878492, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398475878492, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
+      objectReference: {fileID: 0}
     - target: {fileID: 5632157398679626103, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1027,16 +1075,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.8039216
+      value: 0.8392157
       objectReference: {fileID: 0}
     - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.7372549
+      value: 0.7607843
       objectReference: {fileID: 0}
     - target: {fileID: 5632157398755182783, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.36078432
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398826128634, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398826128634, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157398826128634, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157399535156572, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157399535156572, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157399535156572, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23921569
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
