@@ -50,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Lightning.unity
     guid: d603b80a3781c2b46918b176f7cb86d0
+  - enabled: 1
+    path: Assets/Scenes/Levels/Thatchwork.unity
+    guid: 721db2df42b83d142a5d25d72765a568
+  - enabled: 1
+    path: Assets/Scenes/Levels/House.unity
+    guid: 5047e4269c362c44c975bf20dd93b961
+  - enabled: 1
+    path: Assets/Scenes/Levels/Infinity.unity
+    guid: fbe66803463230f4f82edbd074179455
   m_configObjects: {}
