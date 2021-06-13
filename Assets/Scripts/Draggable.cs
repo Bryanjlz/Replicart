@@ -45,7 +45,6 @@ public class Draggable : MonoBehaviour {
         isBeingHeld = true;
         displacementX = gameObject.transform.position.x - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
         displacementY = gameObject.transform.position.y - (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
-        print((int)(Camera.main.ScreenToWorldPoint(Input.mousePosition)).x + " " + (int)(Camera.main.ScreenToWorldPoint(Input.mousePosition)).y);
 
 
         for (int i = 0; i < transform.childCount; i++)
