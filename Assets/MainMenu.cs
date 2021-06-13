@@ -25,20 +25,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        delete = false;
-        gen = false;
-        GenerateBlocks();
-    }
-
-    private void Update() {
-        if (delete) {
-            RemoveBlocks();
-            delete = false;
-        }
-        if (gen) {
-            GenerateBlocks();
-            gen = false;
-        }
+        map.AddGroup(blockParent.gameObject);
     }
 
     void GenerateBlocks () {
