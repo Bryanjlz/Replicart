@@ -122,6 +122,7 @@ public class Block : MonoBehaviour
     private void OnMouseExit()
     {
         bdc.LowLight();
+        print("exited");
     }
 
     private void OnMouseUp() {

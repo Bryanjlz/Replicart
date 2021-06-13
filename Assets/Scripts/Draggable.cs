@@ -51,7 +51,7 @@ public class Draggable : MonoBehaviour {
         for (int i = 0; i < transform.childCount; i++)
         {
             Color current = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
-            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.7f);
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.6f);
         }
 
         map.RemoveGroup(gameObject);
@@ -63,15 +63,18 @@ public class Draggable : MonoBehaviour {
         if (Input.GetMouseButton(0) == false) { 
             foreach (Transform bt in transform) {
                 Color current = bt.GetComponent<SpriteRenderer>().color;
-                bt.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.5f);
+                bt.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 0.6f);
             }
         }
     }
 
     public void LowLight() {
-        foreach (Transform bt in transform) {
-            Color current = bt.GetComponent<SpriteRenderer>().color;
-            bt.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1f);
+        if (Input.GetMouseButton(0) == false) {
+            foreach (Transform bt in transform)
+            {
+                Color current = bt.GetComponent<SpriteRenderer>().color;
+                bt.GetComponent<SpriteRenderer>().color = new Color(current.r, current.g, current.b, 1f);
+            }
         }
     }
 
