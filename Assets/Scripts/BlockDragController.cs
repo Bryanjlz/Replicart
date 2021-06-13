@@ -31,7 +31,9 @@ public class BlockDragController : Draggable
             print(validSpace);
         } else {
             print("Aw no");
-            source.ModifyAmount(1);
+            if (source.amount != -1) {
+                source.ModifyAmount(1);
+            }
             map.RemoveGroup(gameObject);
             Destroy(gameObject);
         }

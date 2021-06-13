@@ -127,11 +127,17 @@ public class DraggableProducer : MonoBehaviour
         }
 
         text.text = amount.ToString();
+        if (amount == -1) {
+            text.text = "8";
+            RectTransform rt = text.gameObject.GetComponent<RectTransform>();
+            rt.rotation = Quaternion.Euler (0, 0, 90);
+            rt.localPosition = new Vector2(rt.localPosition.x, rt.localPosition.y + 1);
+        }
         text.gameObject.transform.SetAsLastSibling();
     }
 
     public void Generate() {
-        if (amount > 0) {
+        if (amount > 0 || amount == -1) {
             int mousePosX = (int) (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
             int mousePosY = (int) (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
             GameObject go = Instantiate(produce, new Vector3(mousePosX, mousePosY, 0), Quaternion.identity, playerGroupParent);
@@ -140,7 +146,9 @@ public class DraggableProducer : MonoBehaviour
             go.GetComponent<BlockDragController>().PickUp();
             go.GetComponent<BlockDragController>().validSpace = validSpace;
             go.GetComponent<BlockDragController>().source = this;
-            ModifyAmount(-1);
+            if (amount != -1) {
+                ModifyAmount(-1);
+            }
         }
     }
 
