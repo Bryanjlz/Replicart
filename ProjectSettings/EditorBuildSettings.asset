@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Colours.unity
     guid: f4475bc2aaa009148bb30a3ddd4eba9f
   - enabled: 1
+    path: Assets/Scenes/Levels/Checkered.unity
+    guid: e6dcb6cbdb658f74d815395fde2e2823
+  - enabled: 1
     path: Assets/Scenes/Levels/4.unity
     guid: 6eaa3433c47c5f94ab910faf2b2776f5
   - enabled: 1
