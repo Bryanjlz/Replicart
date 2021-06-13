@@ -138,8 +138,8 @@ public class DraggableProducer : MonoBehaviour
 
     public void Generate() {
         if (amount > 0 || amount == -1) {
-            int mousePosX = (int) (Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
-            int mousePosY = (int) (Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
+            int mousePosX = (int)Mathf.Round(Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
+            int mousePosY = (int)Mathf.Round(Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
             GameObject go = Instantiate(produce, new Vector3(mousePosX, mousePosY, 0), Quaternion.identity, playerGroupParent);
             map.AddGroup(go);
             // LOL
