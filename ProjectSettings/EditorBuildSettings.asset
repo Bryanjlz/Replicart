@@ -21,17 +21,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Merge.unity
     guid: f1e5f335082268041a8da8636345678b
   - enabled: 1
+    path: Assets/Scenes/Levels/Deletion.unity
+    guid: 53ca47c25ddfd6a4d9f8c9aef522e528
+  - enabled: 1
+    path: Assets/Scenes/Levels/Plus.unity
+    guid: 5a262d37a6e554647884012982aeca30
+  - enabled: 1
     path: Assets/Scenes/Levels/Heart.unity
     guid: a07c0d4c4dd0893418f3439465bbfa60
-  - enabled: 1
-    path: Assets/Scenes/Levels/Colours.unity
-    guid: f4475bc2aaa009148bb30a3ddd4eba9f
   - enabled: 1
     path: Assets/Scenes/Levels/Checkered.unity
     guid: e6dcb6cbdb658f74d815395fde2e2823
   - enabled: 1
-    path: Assets/Scenes/Levels/4.unity
-    guid: 6eaa3433c47c5f94ab910faf2b2776f5
+    path: Assets/Scenes/Levels/Colours.unity
+    guid: f4475bc2aaa009148bb30a3ddd4eba9f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Pinwheel.unity
+    guid: 29333c06e5e1b3342a3e7b7c4b01f594
+  - enabled: 1
+    path: Assets/Scenes/Levels/Mondrian.unity
+    guid: f2423226618a7cd4ebdc8269b5349fc4
   - enabled: 1
     path: Assets/Scenes/Levels/Positivity.unity
     guid: b1bb7e6188b3e5c4a8e63cab4955b877
@@ -39,14 +48,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Overlap.unity
     guid: 40faf934e6bffad44b02e82f2281fcd8
   - enabled: 1
+    path: Assets/Scenes/Levels/House.unity
+    guid: 5047e4269c362c44c975bf20dd93b961
+  - enabled: 1
+    path: Assets/Scenes/Levels/Infinity.unity
+    guid: fbe66803463230f4f82edbd074179455
+  - enabled: 1
     path: Assets/Scenes/Levels/Loss.unity
     guid: 633b15f0394b135489739b49c2f0ad93
   - enabled: 1
-    path: Assets/Scenes/Levels/Windows.unity
-    guid: af5fd2a907f7ff64f8579bb0ab15f57d
+    path: Assets/Scenes/Levels/Medic!.unity
+    guid: 3dd26a59747e2ba40ab185803583cb8b
   - enabled: 1
-    path: Assets/Scenes/Levels/Plus.unity
-    guid: 5a262d37a6e554647884012982aeca30
+    path: Assets/Scenes/Levels/4.unity
+    guid: 6eaa3433c47c5f94ab910faf2b2776f5
+  - enabled: 1
+    path: Assets/Scenes/Levels/Boomerang.unity
+    guid: 60d9efbcae44f5c42a4f7a33a69414b9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Apple.unity
+    guid: ffc7a5dc65612f741ada68f638362ce8
   - enabled: 1
     path: Assets/Scenes/Levels/Lightning.unity
     guid: d603b80a3781c2b46918b176f7cb86d0
@@ -54,27 +75,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Thatchwork.unity
     guid: 721db2df42b83d142a5d25d72765a568
   - enabled: 1
-    path: Assets/Scenes/Levels/House.unity
-    guid: 5047e4269c362c44c975bf20dd93b961
-  - enabled: 1
-    path: Assets/Scenes/Levels/Infinity.unity
-    guid: fbe66803463230f4f82edbd074179455
-  - enabled: 1
-    path: Assets/Scenes/Levels/Boomerang.unity
-    guid: 60d9efbcae44f5c42a4f7a33a69414b9
-  - enabled: 1
-    path: Assets/Scenes/Levels/Medic!.unity
-    guid: 3dd26a59747e2ba40ab185803583cb8b
-  - enabled: 1
-    path: Assets/Scenes/Levels/Pinwheel.unity
-    guid: 29333c06e5e1b3342a3e7b7c4b01f594
-  - enabled: 1
-    path: Assets/Scenes/Levels/Deletion.unity
-    guid: 53ca47c25ddfd6a4d9f8c9aef522e528
-  - enabled: 1
-    path: Assets/Scenes/Levels/Apple.unity
-    guid: ffc7a5dc65612f741ada68f638362ce8
-  - enabled: 1
-    path: Assets/Scenes/Levels/Mondrian.unity
-    guid: f2423226618a7cd4ebdc8269b5349fc4
+    path: Assets/Scenes/Levels/Windows.unity
+    guid: af5fd2a907f7ff64f8579bb0ab15f57d
   m_configObjects: {}

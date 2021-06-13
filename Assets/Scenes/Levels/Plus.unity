@@ -680,6 +680,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd35d3741469edc4fbfa01e108db8940, type: 3}
+--- !u!1001 &939871744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_text
+      value: PLACED TILES CAN BE CLICKED AND DRAGGED AROUND
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_margin.w
+      value: -0.17679012
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_margin.z
+      value: -0.10102272
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300220458004, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690635, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_Name
+      value: Speech Bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.4999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300471690637, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300876626139, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_Name
+      value: Text Bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511943300876626143, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f176303e420cc8c43a81641d9950f24c, type: 3}
 --- !u!1001 &980429898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -868,6 +949,14 @@ PrefabInstance:
     - target: {fileID: 5632157397538198994, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397656677281, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632157397656677281, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5632157398462590246, guid: deb1460d5a39a2d4ebfc9f3a2e155612, type: 3}
       propertyPath: m_Name
